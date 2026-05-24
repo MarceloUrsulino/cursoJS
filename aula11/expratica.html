@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGO OU BRASILERIRO</title>
+</head>
+<body>
+    <h1>Você é de quel país?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verifcar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+             // Seleciona o input onde o usuário digitou o país
+            var tpa = window.document.querySelector('input#txtpais')
+             // Seleciona a div onde o resultado vai aparecer
+            var res = window.document.querySelector('div#res')
+             // Exibe na div o país que o usuário digitou
+            res.innerHTML = `<p> você mora em <strong> ${tpa.value}.</p>`
+             // Converte o valor para minúsculo e verifica se é brasil
+            if (tpa.value.toLowerCase() == 'brasil') { // tpa.value - retorna "Brasil" (o que foi digitado)
+                // Se for brasil exibe que o usuário é brasileiro
+                res.innerHTML += '<p>Você é <strong>brasileiro</strong></p>'
+            } else{
+                 // Se não for brasil exibe que o usuário é gringo
+                 res.innerHTML += '<p> você é <strong>gringo</strong></p>'
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

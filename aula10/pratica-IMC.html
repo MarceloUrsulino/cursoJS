@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h1>Calcule seu IMC</h1>
+ <!-- Campo de input para o usuário digitar o peso em kg -->
+    <input type="number" step = "any" name="num01" id="num01">
+    <p>PESO</p>
+  <!-- Campo de input para o usuário digitar a altura em metros -->
+    <input type="number" step = "any" name="num02" id="num02">
+    <p>ALTURA</p>
+  <!-- Botão que ao ser clicado chama a função clicar() -->
+    <input type="button" value="IMC" onclick="clicar()">
+<!-- Div onde o resultado do IMC vai ser exibido -->
+    <div id="imc">Seu IMC é</div>
+    <script>
+        function clicar() {
+             // Seleciona o input do peso pelo id
+            var n01 = window.document.querySelector('input#num01')
+             // Seleciona o input da altura pelo id
+            var n02 = window.document.querySelector('input#num02')
+             // Seleciona a div onde o resultado vai aparecer
+            var i = window.document.getElementById('imc')
+             // Converte o valor do peso de string para número
+            var n01 = Number(n01.value)
+              // Converte o valor da altura de string para número
+            var n02 = Number(n02.value)
+             // Calcula o IMC: peso dividido pela altura elevada ao quadrado
+            var i = n01 / (n02 * n02)
+             // Exibe o resultado na div com 2 casas decimais
+            imc.innerHTML = `Seu IMC é ${i.toFixed(2)}.`
+        }
+    </script>
+</body>
+</html>

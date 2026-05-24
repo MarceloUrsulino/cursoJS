@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRATICA EM DOM E CONDICOES</title>
+</head>
+<body>
+    <h3>Digite a senha</h3>
+    <input type="text" name="txtse" id="txtse">
+    <input type="button" value="varificar senha" onclick="verificar()">
+    <div id="res">Sua senha está</div>
+
+    <script>
+        function verificar(){
+            var tse = window.document.querySelector('#txtse')
+            var res = window.document.querySelector('#res')
+            txt = (txtse.value)
+            if (txt === "js123") {
+                res.innerHTML = 'Sua senha está correta'
+            } else{
+                res.innerHTML = 'Senha <strong>incorreta</strong>'
+            }
+        }
+
+    </script>
+
+</body>
+</html>
