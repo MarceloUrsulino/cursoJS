@@ -10,7 +10,7 @@ As pastas **praticando01 ao praticando06** são projetos que
 desenvolvi por conta própria, onde busquei ideias de exercícios 
 e os implementei do zero para fixar o aprendizado.
 
-## Tecnologias usadas
+##  Tecnologias  usadas
 - HTML
 - CSS
 - JavaScript
